@@ -3,6 +3,7 @@
 
 /** Ionic CSS Variables **/
 :root {
+ 
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -74,6 +75,40 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** Pink **/
+  --ion-color-pink: #f25be7;
+  --ion-color-pink-rgb: 242,91,231;
+  --ion-color-pink-contrast: #000000;
+  --ion-color-pink-contrast-rgb: 0,0,0;
+  --ion-color-pink-shade: #d550cb;
+  --ion-color-pink-tint: #f36be9;
+.ion-color-pink {
+  --ion-color-base: var(--ion-color-pink);
+  --ion-color-base-rgb: var(--ion-color-pink-rgb);
+  --ion-color-contrast: var(--ion-color-pink-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-pink-contrast-rgb);
+  --ion-color-shade: var(--ion-color-pink-shade);
+  --ion-color-tint: var(--ion-color-pink-tint);
+}
+
+/** Strong Blue **/
+--ion-color-strongblue: #0404a6;
+--ion-color-strongblue-rgb: 4,4,166;
+--ion-color-strongblue-contrast: #ffffff;
+--ion-color-strongblue-contrast-rgb: 255,255,255;
+--ion-color-strongblue-shade: #040492;
+--ion-color-strongblue-tint: #1d1daf;
+
+.ion-color-strongblue {
+  --ion-color-base: var(--ion-color-strongblue);
+  --ion-color-base-rgb: var(--ion-color-strongblue-rgb);
+  --ion-color-contrast: var(--ion-color-strongblue-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-strongblue-contrast-rgb);
+  --ion-color-shade: var(--ion-color-strongblue-shade);
+  --ion-color-tint: var(--ion-color-strongblue-tint);
+}
+
 }
 
 @media (prefers-color-scheme: dark) {
