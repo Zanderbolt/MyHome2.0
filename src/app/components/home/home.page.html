@@ -1,23 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar color="warning">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title> Home </ion-title>
+    <ion-title class="ProductSans"> Home </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content [fullscreen]="true">
-  <div id="container">
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <div class="ion-text-center">
-            <ion-icon slot="end" color="strongblue" name="home-outline"></ion-icon><br><br>
-            <strong class="ion-text-center" class="capitalize">Welcome to My Home App</strong>
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
+<ion-content [fullscreen]="true"color="dark">
+
+  <!-- Illustracion para el Home -->
+  <img class="foodIllustration" src="../../../assets/illustrations/home.png" alt="foodIllustration" title="foodIllustration">
+
+
+  <ion-card class="foodCard ProductSans">
+    <h2 class="appTittle ion-text-center"> Food App </h2>
+    <ion-button class="foodButton ProductSans ion-text-capitalize" (click)="goToLogIn()">Iniciar Sesión</ion-button>
+    <p class="registerText ion-text-center" (click)="goToRegister()">¿No tienes una cuenta? Regístrate</p>
+  </ion-card>
+
+
 </ion-content>

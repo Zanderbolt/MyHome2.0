@@ -13,11 +13,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth'
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { LoginPipe } from './authentication/login.pipe'
+import { AngularFireDatabaseModule } from '@angular/fire/database'
 
 @NgModule({
-  declarations: [AppComponent, LoginPipe],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -30,6 +29,8 @@ import { LoginPipe } from './authentication/login.pipe'
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
