@@ -26,6 +26,18 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./components/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./authentication/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./authentication/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'client-profile',
+    loadChildren: () => import('./components/client-profile/client-profile.module').then( m => m.ClientProfilePageModule)
   }
 ];
 
