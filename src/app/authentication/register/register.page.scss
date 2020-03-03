@@ -1,0 +1,118 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  @font-face{
+    font-family: 'Product Sans';
+    src: url('../../../assets/fonts/ProductSansRegular.ttf');
+  }
+  
+  .ProductSans {
+    font-family: 'Product Sans', sans-serif;
+  }
+  
+  ion-menu-button {
+    color: var(--ion-color-primary);
+  }
+  
+  #container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  ion-content ion-toolbar {
+    --background: transparent;
+  }
+  
+  .foodIllustration {
+    width: 30%;
+    margin: auto;
+    display: block;
+    margin-top: 25px;
+  }
+  
+  .foodCard {
+    width: 100%;
+    height: 65%;
+    --background: #F3705A;
+    position: fixed;
+    bottom: 0;
+    border-top-left-radius:  50px;
+    border-top-right-radius: 50px;
+  }
+  
+  .appTittle {
+    color: #FFFE33;
+    font-size: 9vw;
+    margin-top: 40px;
+    margin-left: 10%;
+  }
+  
+  .foodButton {
+    --background: #ffffff;
+    color: #344A5E;
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    height: 50px;
+    font-size: 5vw;
+  }
+  
+  .registerForm {
+    margin-top: 30px;
+  }
+
+  .registerItem {
+    color: white;
+    width: 90%;
+    margin: auto;
+    display: block;
+    --background: transparent;
+    --border-color: var(--ion-color-light, #f4f5f8)
+  }
+  .registerText {
+    font-size: 4.5vw;
+    margin-top: 20px;
+    color: #ffffff; 
+  }
+  
+  @font-face{
+    font-family: 'Product Sans';
+    src: url('../../../assets/fonts/ProductSansRegular.ttf');
+  }
+  
+  .ProductSans {
+    font-family: 'Product Sans', sans-serif;
+  }
+
+  .inputText {
+    color: white;
+  }
+  
+  // Change floating focus text
+  ion-item.item-has-focus > ion-label {
+    color: white ;
+}
+

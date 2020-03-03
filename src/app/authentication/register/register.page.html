@@ -1,9 +1,37 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title slot="start" class="ProductSans"> Register </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true"color="dark">
+
+  <!-- Illustracion para el Home -->
+  <img class="foodIllustration" src="../../../assets/illustrations/home.png" alt="foodIllustration" title="foodIllustration">
+
+
+  <ion-card class="foodCard ProductSans">
+    <h2 class="appTittle"> Register </h2>
+    <form class="ProductSans registerForm" [formGroup]="registerForm">
+      <ion-item class="registerItem">
+        <ion-label position="floating">Nombre Completo</ion-label>
+        <ion-input class="ProductSans inputText" formControlName="userName" type="text"></ion-input>
+      </ion-item>
+      <ion-item class="registerItem">
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input class="ProductSans inputText" formControlName="userEmail" type="email"></ion-input>
+      </ion-item>
+      <ion-item class="registerItem">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input class="ProductSans inputText" formControlName="userPassword" type="password"></ion-input>
+      </ion-item>
+    </form>
+    <ion-button class="foodButton ProductSans ion-text-capitalize" (click)="createUser()" [disabled]="registerForm.invalid">Registrate</ion-button>
+    <p class="registerText ion-text-center" (click)="goToRegister()">¿No tienes una cuenta? Regístrate</p>
+  </ion-card>
+
 
 </ion-content>
