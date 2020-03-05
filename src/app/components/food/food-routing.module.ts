@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: FoodPage
+  },
+  {
+    path: 'add-food',
+    loadChildren: () => import('./add-food/add-food.module').then( m => m.AddFoodPageModule)
+  },
+  {
+    path: 'view-food',
+    loadChildren: () => import('./view-food/view-food.module').then( m => m.ViewFoodPageModule)
   }
 ];
 

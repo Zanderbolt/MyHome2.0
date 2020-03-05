@@ -14,6 +14,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth'
 import { AngularFireDatabaseModule } from '@angular/fire/database'
+import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore'
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,13 +26,15 @@ import { AngularFireDatabaseModule } from '@angular/fire/database'
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: FirestoreSettingsToken, useValue: {}}
   ],
   bootstrap: [AppComponent]
 })

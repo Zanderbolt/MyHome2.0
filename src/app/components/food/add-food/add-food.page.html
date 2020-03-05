@@ -1,0 +1,58 @@
+<ion-header [translucent]="true" color="dark">
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-icon (click)="return()" size="large" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ProductSans"> Add Food </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <img class="addFoodIllustration" src="../../../../assets/illustrations/addFood.png" alt="foodIllustration"
+    title="addFoodIllustration">
+
+  <div id="container">
+    <strong class="capitalize ProductSans">Add a new Product</strong>
+  </div>
+  <br><br>
+
+  <ion-card color="dark" class="ProductSans cardContainer">
+    <ion-item color="lowyellow itemFont">
+      <ion-label position="fixed" class="ProductSans">Description</ion-label>
+      <ion-input [(ngModel)]="food.description" placeholder="Enter description" slot="end" class="ProductSans">
+      </ion-input>
+    </ion-item>
+    <ion-item color="lightblack itemFont">
+      <ion-label class="ProductSans" position="fixed">Price $</ion-label>
+      <ion-input [(ngModel)]="food.price" placeholder="Enter Price" type="number" slot="end" class="ProductSans">
+      </ion-input>
+    </ion-item>
+    <br>
+    <ion-button size="large" class="ProductSans ion-text-capitalize" color="warning" (click)="addFood()">
+      Add Food
+    </ion-button>
+    <br><br>
+  </ion-card>
+
+  <!-- <ion-card class="cardContainer" color="dark">
+    <ion-list color="dark" >
+      <ion-item color="dark">
+        <ion-input placeholder="Enter description" [(ngModel)]="food.description">
+        </ion-input>
+      </ion-item>
+      <ion-item color="dark">
+        <ion-input placeholder="Enter Price" [(ngModel)]="food.price">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+      <ion-input placeholder="Need?" [(ngModel)]="food.need">
+      </ion-input>
+    </ion-item>
+    </ion-list> <br>
+    <ion-button color="warning" expand="full" (click)="addFood()">
+      Add Food
+    </ion-button>
+  </ion-card> -->
+
+</ion-content>

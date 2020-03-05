@@ -9,35 +9,43 @@ const routes: Routes = [
   },
   {
     path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    loadChildren: () => import('./folder/folder.module').then(m => m.FolderPageModule)
   },
   {
     path: 'cleanness',
-    loadChildren: () => import('./components/cleanness/cleanness.module').then( m => m.CleannessPageModule)
+    loadChildren: () => import('./components/cleanness/cleanness.module').then(m => m.CleannessPageModule)
   },
   {
     path: 'wish',
-    loadChildren: () => import('./components/wish/wish.module').then( m => m.WishPageModule)
+    loadChildren: () => import('./components/wish/wish.module').then(m => m.WishPageModule)
   },
   {
     path: 'food',
-    loadChildren: () => import('./components/food/food.module').then( m => m.FoodPageModule)
+    loadChildren: () => import('./components/food/food.module').then(m => m.FoodPageModule)
+  },
+  {
+    path: 'add-food',
+    loadChildren: () => import('./components/food/add-food/add-food.module').then(m => m.AddFoodPageModule)
+  },
+  {
+    path: 'view-food/:id',
+    loadChildren: () => import('./components/food/view-food/view-food.module').then(m => m.ViewFoodPageModule)
   },
   {
     path: 'home',
-    loadChildren: () => import('./components/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./components/home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./authentication/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./authentication/login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'register',
-    loadChildren: () => import('./authentication/register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./authentication/register/register.module').then(m => m.RegisterPageModule)
   },
   {
     path: 'client-profile',
-    loadChildren: () => import('./components/client-profile/client-profile.module').then( m => m.ClientProfilePageModule)
+    loadChildren: () => import('./components/client-profile/client-profile.module').then(m => m.ClientProfilePageModule)
   }
 ];
 
@@ -47,4 +55,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -1,0 +1,45 @@
+<ion-header [translucent]="true" color="dark">
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-icon (click)="return()" size="large" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ProductSans"> View Product </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="dark">
+
+  <!-- Illustracion para el view food -->
+  <img class="foodIllustration" src="../../../../assets/illustrations/milk.png" alt="foodIllustration"
+    title="foodIllustration">
+
+  <div id="container">
+    <strong class="capitalize ProductSans">View existing product.</strong>
+  </div>
+
+
+  <ion-card color="dark" class="ProductSans cardContainer">
+    <ion-item color="lowyellow itemFont">
+      <ion-label position="fixed" class="ProductSans">Description</ion-label>
+      <ion-input disabled="{{!editMode}}" slot="end" [(ngModel)]="food.description" class="ProductSans">
+      </ion-input>
+    </ion-item>
+    <ion-item color="lightblack itemFont">
+      <ion-label class="ProductSans" position="fixed">Price $</ion-label>
+      <ion-input disabled="{{!editMode}}" slot="end" class="ProductSans" [(ngModel)]="food.price">
+      </ion-input>
+    </ion-item>
+    <ion-item color="lightblack">
+      <!-- <ion-button slot="end" color="danger" (click)="deleteFood(food.id)"> -->
+      <ion-icon size="large" color="danger" slot="end" (click)="deleteFood(food.id)" name="trash-outline"></ion-icon>
+      <ion-icon *ngIf="!editMode" size="large" color="success" slot="end" (click)="enableEdit()" name="create-outline">
+      </ion-icon>
+      <ion-icon *ngIf="editMode" size="large" color="secondary" slot="end" (click)="updateFood(food.id)"
+        name="save-sharp"></ion-icon>      
+    </ion-item>
+
+  </ion-card>
+
+
+</ion-content>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Food } from '../../models/food'
+import { Observable } from 'rxjs';
+import { FirebaseService } from '../../services/firebase/firebase.service'
 
 @Component({
   selector: 'app-food',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../folder.page.scss'],
 })
 export class FoodPage implements OnInit {
+  private foods: Observable<Food[]>; 
 
-  constructor() { }
+  constructor(private fbService: FirebaseService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.foods = this.fbService.getFoods();
   }
 
 }
