@@ -44,7 +44,6 @@ export class FirebaseService {
 
   //Create New Food
   addFood(food: Food): Promise<DocumentReference> {
-    console.log("ADD FOOD METHOD")
     return this.foodCollection.add(food);
   }
 
@@ -53,7 +52,15 @@ export class FirebaseService {
     return this.foodCollection.doc(food.id).update( {
       description: food.description,
       price: food.price,
-      need: food.need
+      need: food.need,
+      date: food.date,
+    });
+  }
+
+  //UpdateStock
+  updateStock(id: string, onStock: boolean): Promise<void> {
+    return this.foodCollection.doc(id).update( {
+      need: !onStock
     });
   }
 

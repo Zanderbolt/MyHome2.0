@@ -16,19 +16,22 @@ export class AppComponent implements OnInit {
       title: 'Food List',
       url: '/food/',
       icon: 'pizza-outline',
-      color: 'danger'
+      color: 'danger',
+      disabled: 'false'
     },
     {
       title: 'Cleanness List',
       url: '/cleanness/',
       icon: 'cut-outline',
-      color: 'pink'
+      color: 'pink',
+      disabled: 'true'
     },
     {
       title: 'Wish List',
       url: '/wish/',
       icon: 'star-outline',
-      color: 'warning'
+      color: 'warning',
+      disabled: 'true'
     }
   ];  
 

@@ -55,6 +55,10 @@ ion-content ion-toolbar {
   --background: transparent;
 }
 
+ion-row {
+  margin-left: 10px;
+}
+
 .foodIllustration {
   width: 30%;
   margin: auto;
@@ -128,3 +132,22 @@ ion-content ion-toolbar {
   display: block;
   text-align: center;
 }
+
+.descriptionFont {
+  font-size: 30px;
+}
+
+.dateFont {
+  color: white;
+  font-size: 25px;
+}
+
+.priceFont {
+  color: greenyellow;
+  font-size: 25px;
+}
+
+
+
+
+

@@ -18,7 +18,6 @@
     <strong class="capitalize ProductSans">View existing product.</strong>
   </div>
 
-
   <ion-card color="dark" class="ProductSans cardContainer">
     <ion-item color="lowyellow itemFont">
       <ion-label position="fixed" class="ProductSans">Description</ion-label>
@@ -27,7 +26,7 @@
     </ion-item>
     <ion-item color="lightblack itemFont">
       <ion-label class="ProductSans" position="fixed">Price $</ion-label>
-      <ion-input disabled="{{!editMode}}" slot="end" class="ProductSans" [(ngModel)]="food.price">
+      <ion-input type="number" disabled="{{!editMode}}" slot="end" class="ProductSans" [(ngModel)]="food.price">
       </ion-input>
     </ion-item>
     <ion-item color="lightblack">
@@ -36,7 +35,7 @@
       <ion-icon *ngIf="!editMode" size="large" color="success" slot="end" (click)="enableEdit()" name="create-outline">
       </ion-icon>
       <ion-icon *ngIf="editMode" size="large" color="secondary" slot="end" (click)="updateFood(food.id)"
-        name="save-sharp"></ion-icon>      
+        name="save-sharp"></ion-icon>
     </ion-item>
 
   </ion-card>

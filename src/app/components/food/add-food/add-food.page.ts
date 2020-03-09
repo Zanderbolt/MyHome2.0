@@ -4,24 +4,30 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FirebaseService } from 'src/app/services/firebase/firebase.service';
 import { ToastController } from '@ionic/angular';
 
+
+
 @Component({
   selector: 'app-add-food',
   templateUrl: './add-food.page.html',
   styleUrls: ['./add-food.page.scss'],
 })
 export class AddFoodPage implements OnInit {
+  dateFormat = require('dateformat');
+  now = new Date().toLocaleDateString();
+
 
   food: Food = {
     description: '',
-    price: 0,
+    price: null,
     need: false,
+    date: this.now,
   }
 
   constructor(
-      private activatedRoute: ActivatedRoute,
-      private fbService: FirebaseService,
-      private toastController: ToastController,
-      private router: Router    
+    private activatedRoute: ActivatedRoute,
+    private fbService: FirebaseService,
+    private toastController: ToastController,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -39,6 +45,7 @@ export class AddFoodPage implements OnInit {
     }, err => {
       console.log("error")
     });
+
   }
 
   return() {
@@ -50,11 +57,11 @@ export class AddFoodPage implements OnInit {
     const toast = await this.toastController.create({
       message: 'Item Added',
       color: 'success',
-      duration: 2000,
-      buttons : [
+      duration: 1000,
+      buttons: [
         {
           side: 'start',
-          icon: 'checkmark',        
+          icon: 'checkmark',
         }
       ]
     });

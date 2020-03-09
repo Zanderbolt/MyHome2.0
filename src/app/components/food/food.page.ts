@@ -17,4 +17,9 @@ export class FoodPage implements OnInit {
     this.foods = this.fbService.getFoods();
   }
 
+  
+  changeOnStock(id: string, onStock: boolean) {
+    this.fbService.updateStock(id,onStock);
+  }
+
 }

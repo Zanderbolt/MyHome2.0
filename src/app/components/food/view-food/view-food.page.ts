@@ -16,6 +16,7 @@ export class ViewFoodPage implements OnInit, AfterViewInit {
     description: '',
     price: 0,
     need: false,
+    date: new Date().toLocaleDateString()
   };
 
   editMode: boolean = false;
@@ -57,6 +58,8 @@ export class ViewFoodPage implements OnInit, AfterViewInit {
   }
 
   updateFood(id: string) {
+    this.food.date = new Date().toLocaleDateString();
+    console.log(this.food)
     this.enableEdit();    
     this.updatedFoodToastr()
     this.fbService.updateFood(this.food);
@@ -96,7 +99,7 @@ export class ViewFoodPage implements OnInit, AfterViewInit {
     const toast = await this.toastController.create({
       message: 'Item Deleted.',
       color: 'danger',
-      duration: 2000,
+      duration: 1000,
       buttons : [
         {
           side: 'start',
@@ -112,7 +115,7 @@ export class ViewFoodPage implements OnInit, AfterViewInit {
     const toast = await this.toastController.create({
       message: 'Item Updated.',
       color: 'success',
-      duration: 2000,
+      duration: 1000,
       buttons : [
         {
           side: 'start',
